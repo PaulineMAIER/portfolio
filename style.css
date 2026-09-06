@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* 1. PASSAGE EN MODE SOMBRE COMPLET (Très tendance) */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #080A15; /* Tout le site est maintenant en fond bleu nuit très profond */
+    color: #F8FAFC; /* Le texte principal devient blanc/gris très clair */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* 2. HEADER FAÇON "GLASSMORPHISM" (Effet verre translucide) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(8, 10, 21, 0.7); /* Transparent */
+    backdrop-filter: blur(12px); /* Effet flou très moderne quand on scrolle */
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h2 { margin: 0; font-size: 1.3rem; color: #FFFFFF; font-weight: 600; }
+nav a { text-decoration: none; color: #94A3B8; margin-left: 25px; font-size: 0.95rem; transition: color 0.3s; }
+nav a:hover { color: #00E5FF; /* Cyan lumineux au survol */ }
+
+/* 3. HERO SECTION AMÉLIORÉE */
+.hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    min-height: 60vh;
+    text-align: left;
+    padding: 40px 5%;
+    /* Dégradé de fond plus riche : mélange de bleu nuit et d'une touche de violet sombre */
+    background: radial-gradient(circle at center, #172554 0%, #080A15 100%); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-text { max-width: 600px; }
+.hero-text .btn { display: inline-block; }
+
+.hero-image img {
+    width: 170px; 
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #00E5FF; /* Rappel du cyan */
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.15); 
+}
+
+@media (max-width: 768px) {
+    .hero { flex-direction: column-reverse; text-align: center; gap: 40px; }
+}
+
+h1 { 
+    font-size: 4.5rem; /* Un peu plus grand pour l'impact */
+    margin-bottom: 15px; 
+    font-weight: 700; /* Légèrement plus épais */
+    letter-spacing: -2px; /* On resserre les lettres, c'est très tendance */
+    
+    /* Le fameux effet "texte en dégradé" */
+    background: linear-gradient(135deg, #FFFFFF 30%, #00E5FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* On retire complètement l'effet néon ringard */
+    text-shadow: none; 
+}
+
+
+p { 
+    font-size: 1.2rem; 
+    color: #94A3B8; 
+    max-width: 700px; 
+    margin-bottom: 40px; 
+}
+
+/* 4. BOUTON AVEC DÉGRADÉ (Ultra actuel) */
+.btn {
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #00E5FF, #2563EB); /* Dégradé Cyan vers Bleu Roi */
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 30px; /* Bords très arrondis style "pilule" */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+.btn:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.4);
+}
+
+/* 5. DESIGN DES CARTES PROJETS POUR LE MODE SOMBRE */
+.content-section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content-section h3 {
+    font-size: 1.8rem;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(30, 41, 59, 0.4); /* Bleu-gris transparent pour se fondre au fond */
+    padding: 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #F8FAFC;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Bordure très fine et discrète */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+/* L'effet Wahou quand on survole une carte */
+.card:hover {
+    border-color: #00E5FF;
+    box-shadow: 0 5px 20px rgba(0, 229, 255, 0.15);
+    transform: translateY(-5px); /* La carte se soulève */
+    background-color: rgba(30, 41, 59, 0.8);
+}
+
+.doc {
+    font-weight: 400;
+    color: #CBD5E1; /* Gris un peu plus clair pour les documents PDF */
+}
+
+/* --- DESIGN DES ONGLETS DYNAMIQUES --- */
+.tabs-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tab-link {
+    background-color: rgba(30, 41, 59, 0.4);
+    color: #94A3B8;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.tab-link:hover {
+    background-color: rgba(30, 41, 59, 0.8);
+    color: #F8FAFC;
+    transform: translateY(-2px);
+}
+
+/* Style du bouton quand l'onglet est sélectionné */
+.tab-link.active {
+    background: linear-gradient(135deg, #00E5FF, #2563EB);
+    color: #FFFFFF;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.tab-content {
+    background-color: rgba(30, 41, 59, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #F8FAFC;
+    /* Petite animation d'apparition douce */
+    animation: fadeIn 0.4s ease-out;
+}
+
+.tab-content h4 {
+    margin-top: 0;
+    color: #00E5FF;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Unifier la typographie des textes et des listes dans les onglets */
+.tab-content p, .tab-content li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem; /* Même taille de texte pour tout le monde */
+    color: #94A3B8; /* Même jolie couleur gris clair */
+    line-height: 1.7; /* Pour bien aérer le texte */
+}
+
+/* On réduit un peu l'espace sous les paragraphes dans les onglets pour faire plus propre */
+.tab-content p {
+    margin-bottom: 15px;
+    max-width: 100%; /* Permet au texte de prendre toute la largeur de la carte */
+}
+
+/* Style des images à l'intérieur des onglets */
+.tab-image {
+    max-width: 100%; /* Empêche l'image de déborder de l'onglet */
+    height: auto;    /* Garde les bonnes proportions */
+    border-radius: 10px; /* Bords légèrement arrondis */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Légère ombre pour détacher l'image du fond */
+}
