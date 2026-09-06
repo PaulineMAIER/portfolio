@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pauline Maier - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+      <h2>Pauline Maier</h2>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#journey">My Journey</a>
+        <a href="#documents">Documents</a>
+      </nav>
+    </header>
+
+<section class="hero" id="about">
+  <div class="hero-text">
+    <h1>Pauline MAIER</h1>
+    <p>Engineering student at ENSEEIHT in Electronics, Electrical Energy and Automation</p>
+    <a href="https://www.linkedin.com" target="_blank" class="btn">LinkedIn Profile</a>
+  </div>
+  
+  <div class="hero-image">
+    <img src="https://i.ibb.co/VY81yCR8/IMG-20251125-WA0004.jpg" alt="Photo de Pauline">
+  </div>
+
+</section>
+
+       <section class="content-section" id="journey">
+        <h3>My Journey</h3>
+        
+        <!-- Les boutons des onglets -->
+        <div class="tabs-menu">
+            <button class="tab-link active" onclick="openTab(event, 'course')">📚 Engineering Course</button>
+            <button class="tab-link" onclick="openTab(event, 'mobility')">🌍 International Mobility</button>
+            <button class="tab-link" onclick="openTab(event, 'sustainability')">🌿 Sustainability</button>
+        </div>
+
+        <!-- Le contenu des onglets (tu pourras y coller tes textes Notion !) -->
+        <div id="course" class="tab-content" style="display: block;">
+            <h4>Engineering Course</h4>
+            <p>
+Advenced Mathematics : Expert in linear algebra, calculus, differential equations and mathematical modeling.</p>
+<p>Programming: Proficient in multiple languages :</p>
+<ul>
+  <li>Python : Data analysis, Automation, Scientific computing</li>
+  <li>SQL : Database design, queries, data management</li>
+  <li>C : Embedded systems, low-level programming (We also created a Snake game project in C.)</li>
+    </ul>
+<p>Complex Systems : Skilled in analyzing and solving complex engineering systems.</p>
+
+        </div>
+
+        <div id="mobility" class="tab-content" style="display: none;">
+            <h4>International Mobility</h4>
+            <p>During the past few months, I’ve been thinking about three mobility projects.</p>
+
+<p>The first one would be to go on an exchange in a Northern European country, because I’m curious about their way of working and their philosophy of life.<br>
+
+They also use a lot of sustainable energy, and I would like to see how it works in practice.</p>
+
+<p>Next, I would like to go to Japan — that’s why I chose Japanese as my second foreign language at school.<br>
+
+I’m really interested in the work culture, the way of life and the education system.</p>
+
+<p>My third mobility project is to do a dual degree in Quebec, Canada, because I’m totally in love with this country, and I think their mobility program fits perfectly with my goals.<br>
+
+I would like to spend my final year in Quebec to learn another specialty like environmental engineering; A degree proposed by Concordia University in Montréal to strengthen my degree and give me the opportunity to work exactly where I want, in the field I choose.</p>
+
+<img src="https://i.ibb.co/FSLdxzd/4083-universite-concordia.jpg" alt="Logo Université Concordia" class="tab-image">
+
+        </div>
+
+        <div id="sustainability" class="tab-content" style="display: none;">
+            <h4>Sustainability and Civil Engagement</h4>
+            <p>Détaille ici tes engagements écologiques, tes projets associatifs ou citoyens.</p>
+        </div>
+    </section>
+
+
+    <section class="content-section" id="documents">
+        <h3>Documents & Presentations</h3>
+        <div class="grid">
+            <a href="https://drive.google.com/file/d/1jIpwrl1acryh8Vk9WKr6tJYMtHiYIrBw/view?usp=drivesdk" target="_blank" class="card doc">📄 CV English (PDF)</a>
+            <a href="https://drive.google.com/file/d/1hkFd3bp0tuSMn7O8pOG5HRg4ovUoczBZ/view?usp=drivesdk" target="_blank" class="card doc">📄 CV French (PDF)</a>
+            <a href="https://drive.google.com/file/d/1x4XAtIcOArrzNqzGPPvpAQKV06LKpVjq/view?usp=drivesdk" target="_blank" class="card doc">📄 Elevator pitch</a>
+            <a href="https://drive.google.com/file/d/1-0rzMpVO6He_aqfYf-ewNdR3qGbbnh6r/view?usp=drivesdk" target="_blank" class="card doc">📄 My japanese presentation</a>
+        </div>
+    </section>
+<script src="script.js"></script>
+</body>
+</html>
