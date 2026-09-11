@@ -230,3 +230,25 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Légère ombre pour détacher l'image du fond */
 }
+
+/* --- Mise en page Image + Texte côte à côte --- */
+.image-text-block {
+    display: flex;
+    gap: 25px; /* L'espace aéré entre la photo et le texte */
+    align-items: flex-start; /* Aligne le haut de l'image avec le haut du texte */
+    margin-bottom: 20px;
+}
+
+/* On contrôle la taille de l'image pour qu'elle ne prenne pas toute la place */
+.image-text-block .tab-image {
+    max-width: 220px; /* Tu peux modifier ce chiffre pour agrandir ou réduire la photo */
+    margin-top: 0; /* On retire la marge pour que ce soit bien aligné avec le texte */
+    flex-shrink: 0; /* Empêche la photo d'être déformée */
+}
+
+/* Bonus pro : Sur un petit écran de téléphone, on remet l'image au-dessus pour que ce soit lisible */
+@media (max-width: 768px) {
+    .image-text-block {
+        flex-direction: column;
+    }
+}
