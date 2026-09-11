@@ -2,7 +2,7 @@
 
 /* 1. PASSAGE EN MODE SOMBRE COMPLET (Très tendance) */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;   
     background-color: #080A15; /* Tout le site est maintenant en fond bleu nuit très profond */
     color: #F8FAFC; /* Le texte principal devient blanc/gris très clair */
     margin: 0;
